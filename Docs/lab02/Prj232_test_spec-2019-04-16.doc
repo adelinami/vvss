@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN'>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>testspec Prj232 - cgir2072_BBT</title>
+<link type="text/css" rel="stylesheet" href="https://www.scs.ubbcluj.ro/testlink/gui/themes/default/css/tl_documents.css" />
+<style type="text/css" media="print">.notprintable { display:none;}</style>
+</head>
+<body>
+<div>
+<div style="float:right;">TestLink Community [configure $tlCfg-&gt;document_generator-&gt;company_name]</div>
+<div>&nbsp;</div><hr />
+<p style="text-align: center;"><img alt="TestLink logo" title="configure using $tlCfg->document_generator->company_logo" height="53" src="https://www.scs.ubbcluj.ro/testlink/gui/themes/default/images/tl-logo-transparent-25.png" /></div>
+<div class="doc_title"><p>Test Specification</p></div>
+<div class="doc_title" style="text-align:left;margin: auto;"><p>Test Project: Prj232<br>Test Suite: Prj232 - cgir2072_BBT</p></div>
+<div class="summary"><p id="printedby">Printed by TestLink on 16/04/2019</p></div>
+<div class="pagefooter" id="copyright">2012 &copy; TestLink Community</div>
+<h1 class="doclevel" >Scope</h1>
+<div class="txtlevel"><p>
+	Testing project for group 232.</p></div>
+ <br/><h1 class='doclevel'>Test Suite : cgir2072_BBT</h1>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="3">Test Case Prj232-148: ECP_Valid</th></tr>
+<tr><td colspan="3"><span class="label">Summary:</span><br /><pre style="background-color:#272822;color:#cfbfad;font-family:'Source Code Pro';font-size:9.6pt;">
+<span style="color:#ff9393;font-weight:bold;font-style:italic;">@Test
+</span><span style="color:#dd2867;font-weight:bold;">public void </span><span style="color:#cc4cba;font-weight:bold;font-style:italic;">addContact_TC1_ECP</span><span style="color:#f9faf4;">() {
+</span><span style="color:#f9faf4;">    </span><span style="color:#dd2867;font-weight:bold;">try </span><span style="color:#f9faf4;">{
+</span><span style="color:#f9faf4;">        </span><span style="color:#00abff;font-weight:bold;font-style:italic;">con </span><span style="color:#f9faf4;">= </span><span style="color:#dd2867;font-weight:bold;">new </span><span style="color:#00d8ff;font-weight:bold;">Contact</span><span style="color:#f9faf4;">(</span><span style="color:#78d700;font-style:italic;">&quot;nume1&quot;</span><span style="color:#f9faf4;">, </span><span style="color:#78d700;font-style:italic;">&quot;adresa1&quot;</span><span style="color:#f9faf4;">, </span><span style="color:#78d700;font-style:italic;">&quot;0123456789&quot;</span><span style="color:#f9faf4;">);
+</span><span style="color:#f9faf4;">    } </span><span style="color:#dd2867;font-weight:bold;">catch </span><span style="color:#f9faf4;">(</span><span style="color:#1290c3;font-weight:bold;">InvalidFormatException </span><span style="color:#00d8ff;font-weight:bold;">e</span><span style="color:#f9faf4;">) {
+</span><span style="color:#f9faf4;">        </span><span style="color:#a7ec21;">fail</span><span style="color:#f9faf4;">();
+</span><span style="color:#f9faf4;">    }
+</span><span style="color:#f9faf4;">     
+</span><span style="color:#f9faf4;">    </span><span style="color:#00abff;font-weight:bold;font-style:italic;">repositoryContact</span><span style="color:#f9faf4;">.</span><span style="color:#cc4cba;">addContact</span><span style="color:#f9faf4;">(</span><span style="color:#00abff;font-weight:bold;font-style:italic;">con</span><span style="color:#f9faf4;">);
+</span><span style="color:#f9faf4;">    </span><span style="color:#dd2867;font-weight:bold;">for</span><span style="color:#f9faf4;">(</span><span style="color:#1290c3;font-weight:bold;">Contact </span><span style="color:#ff8b4d;font-weight:bold;">c </span><span style="color:#f9faf4;">: </span><span style="color:#00abff;font-weight:bold;font-style:italic;">repositoryContact</span><span style="color:#f9faf4;">.</span><span style="color:#cc4cba;">getContacts</span><span style="color:#f9faf4;">())
+</span><span style="color:#f9faf4;">        </span><span style="color:#dd2867;font-weight:bold;">if </span><span style="color:#f9faf4;">(</span><span style="color:#ff8b4d;font-weight:bold;">c</span><span style="color:#f9faf4;">.</span><span style="color:#cc4cba;">equals</span><span style="color:#f9faf4;">(</span><span style="color:#00abff;font-weight:bold;font-style:italic;">con</span><span style="color:#f9faf4;">))
+</span><span style="color:#f9faf4;">        {
+</span><span style="color:#f9faf4;">            </span><span style="color:#a7ec21;">assertTrue</span><span style="color:#f9faf4;">(</span><span style="color:#dd2867;font-weight:bold;">true</span><span style="color:#f9faf4;">);
+</span><span style="color:#f9faf4;">            </span><span style="color:#dd2867;font-weight:bold;">break</span><span style="color:#f9faf4;">;
+</span><span style="color:#f9faf4;">        }
+</span><span style="color:#f9faf4;">}</span></pre>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="2">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="2"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="2">Medium</td></tr>
+<tr><td colspan="3"></td></tr></table>
+</div>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="3">Test Case Prj232-149: ECP_Nonvalid</th></tr>
+<tr><td colspan="3"><span class="label">Summary:</span><br /><pre style="background-color:#272822;color:#cfbfad;font-family:'Source Code Pro';font-size:9.6pt;">
+</pre>
+<pre style="font-family: &quot;Source Code Pro&quot;; font-size: 9.6pt;">
+<span style="color:#ff9393;font-weight:bold;font-style:italic;">@Test </span><span style="color:#dd2867;font-weight:bold;">public void </span><span style="color:#cc4cba;font-weight:bold;font-style:italic;">addContact_TC2_ECP</span><span style="color:#f9faf4;">() { </span><span style="color:#f9faf4;"> </span><span style="color:#dd2867;font-weight:bold;">try </span><span style="color:#f9faf4;">{ </span><span style="color:#f9faf4;"> </span><span style="color:#00abff;font-weight:bold;font-style:italic;">con </span><span style="color:#f9faf4;">= </span><span style="color:#dd2867;font-weight:bold;">new </span><span style="color:#00d8ff;font-weight:bold;">Contact</span><span style="color:#f9faf4;">(</span><span style="color:#78d700;font-style:italic;">&quot;&quot;</span><span style="color:#f9faf4;">, </span><span style="color:#78d700;font-style:italic;">&quot;adresa1&quot;</span><span style="color:#f9faf4;">, </span><span style="color:#78d700;font-style:italic;">&quot;0123456789&quot;</span><span style="color:#f9faf4;">); </span><span style="color:#f9faf4;"> </span><span style="color:#a7ec21;">fail</span><span style="color:#f9faf4;">(); </span><span style="color:#f9faf4;"> } </span><span style="color:#dd2867;font-weight:bold;">catch </span><span style="color:#f9faf4;">(</span><span style="color:#1290c3;font-weight:bold;">InvalidFormatException </span><span style="color:#00d8ff;font-weight:bold;">e</span><span style="color:#f9faf4;">) { </span><span style="color:#f9faf4;"> </span><span style="color:#a7ec21;">assertTrue</span><span style="color:#f9faf4;">(</span><span style="color:#dd2867;font-weight:bold;">true</span><span style="color:#f9faf4;">); </span><span style="color:#f9faf4;"> } </span><span style="color:#f9faf4;"> </span><span style="color:#f9faf4;"> </span><span style="color:#00abff;font-weight:bold;font-style:italic;">repositoryContact</span><span style="color:#f9faf4;">.</span><span style="color:#cc4cba;">addContact</span><span style="color:#f9faf4;">(</span><span style="color:#00abff;font-weight:bold;font-style:italic;">con</span><span style="color:#f9faf4;">); </span><span style="color:#f9faf4;"> </span><span style="color:#dd2867;font-weight:bold;">if</span><span style="color:#f9faf4;">(</span><span style="color:#00abff;font-weight:bold;font-style:italic;">repositoryContact</span><span style="color:#f9faf4;">.</span><span style="color:#cc4cba;">count</span><span style="color:#f9faf4;">() == </span><span style="color:#6897bb;">5</span><span style="color:#f9faf4;">) </span><span style="color:#f9faf4;"> </span><span style="color:#a7ec21;">fail</span><span style="color:#f9faf4;">(); </span><span style="color:#f9faf4;">}</span></pre>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="2">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="2"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="2">Medium</td></tr>
+<tr><td colspan="3"></td></tr></table>
+</div>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="3">Test Case Prj232-150: BVA_Valid</th></tr>
+<tr><td colspan="3"><span class="label">Summary:</span><br /><pre style="background-color:#272822;color:#cfbfad;font-family:'Source Code Pro';font-size:9.6pt;">
+<span style="color:#ff9393;font-weight:bold;font-style:italic;">@Test
+</span><span style="color:#dd2867;font-weight:bold;">public void </span><span style="color:#cc4cba;font-weight:bold;font-style:italic;">addContact_TC3_BVA</span><span style="color:#f9faf4;">() {
+</span><span style="color:#f9faf4;">    </span><span style="color:#dd2867;font-weight:bold;">try </span><span style="color:#f9faf4;">{
+</span><span style="color:#f9faf4;">        </span><span style="color:#00abff;font-weight:bold;font-style:italic;">con </span><span style="color:#f9faf4;">= </span><span style="color:#dd2867;font-weight:bold;">new </span><span style="color:#00d8ff;font-weight:bold;">Contact</span><span style="color:#f9faf4;">(</span><span style="color:#78d700;font-style:italic;">&quot;M&quot;</span><span style="color:#f9faf4;">, </span><span style="color:#78d700;font-style:italic;">&quot;adresa1&quot;</span><span style="color:#f9faf4;">, </span><span style="color:#78d700;font-style:italic;">&quot;0123456789&quot;</span><span style="color:#f9faf4;">);
+</span><span style="color:#f9faf4;">    } </span><span style="color:#dd2867;font-weight:bold;">catch </span><span style="color:#f9faf4;">(</span><span style="color:#1290c3;font-weight:bold;">InvalidFormatException </span><span style="color:#00d8ff;font-weight:bold;">e</span><span style="color:#f9faf4;">) {
+</span><span style="color:#f9faf4;">        </span><span style="color:#a7ec21;">fail</span><span style="color:#f9faf4;">();
+</span><span style="color:#f9faf4;">    }
+</span><span style="color:#f9faf4;">     
+</span><span style="color:#f9faf4;">    </span><span style="color:#00abff;font-weight:bold;font-style:italic;">repositoryContact</span><span style="color:#f9faf4;">.</span><span style="color:#cc4cba;">addContact</span><span style="color:#f9faf4;">(</span><span style="color:#00abff;font-weight:bold;font-style:italic;">con</span><span style="color:#f9faf4;">);
+</span><span style="color:#f9faf4;">    </span><span style="color:#dd2867;font-weight:bold;">for</span><span style="color:#f9faf4;">(</span><span style="color:#1290c3;font-weight:bold;">Contact </span><span style="color:#ff8b4d;font-weight:bold;">c </span><span style="color:#f9faf4;">: </span><span style="color:#00abff;font-weight:bold;font-style:italic;">repositoryContact</span><span style="color:#f9faf4;">.</span><span style="color:#cc4cba;">getContacts</span><span style="color:#f9faf4;">())
+</span><span style="color:#f9faf4;">        </span><span style="color:#dd2867;font-weight:bold;">if </span><span style="color:#f9faf4;">(</span><span style="color:#ff8b4d;font-weight:bold;">c</span><span style="color:#f9faf4;">.</span><span style="color:#cc4cba;">equals</span><span style="color:#f9faf4;">(</span><span style="color:#00abff;font-weight:bold;font-style:italic;">con</span><span style="color:#f9faf4;">))
+</span><span style="color:#f9faf4;">        {
+</span><span style="color:#f9faf4;">            </span><span style="color:#a7ec21;">assertTrue</span><span style="color:#f9faf4;">(</span><span style="color:#dd2867;font-weight:bold;">true</span><span style="color:#f9faf4;">);
+</span><span style="color:#f9faf4;">            </span><span style="color:#dd2867;font-weight:bold;">break</span><span style="color:#f9faf4;">;
+</span><span style="color:#f9faf4;">        }
+</span><span style="color:#f9faf4;">}</span></pre>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="2">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="2"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="2">Medium</td></tr>
+<tr><td colspan="3"></td></tr></table>
+</div>
+<p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="3">Test Case Prj232-151: BVA_Nonvalid</th></tr>
+<tr><td colspan="3"><span class="label">Summary:</span><br /><pre style="background-color:#272822;color:#cfbfad;font-family:'Source Code Pro';font-size:9.6pt;">
+<span style="color:#ff9393;font-weight:bold;font-style:italic;">@Test
+</span><span style="color:#dd2867;font-weight:bold;">public void </span><span style="color:#cc4cba;font-weight:bold;font-style:italic;">addContact_TC8_BVA</span><span style="color:#f9faf4;">() {
+</span><span style="color:#f9faf4;">    </span><span style="color:#dd2867;font-weight:bold;">try </span><span style="color:#f9faf4;">{
+</span><span style="color:#f9faf4;">        </span><span style="color:#00abff;font-weight:bold;font-style:italic;">con </span><span style="color:#f9faf4;">= </span><span style="color:#dd2867;font-weight:bold;">new </span><span style="color:#00d8ff;font-weight:bold;">Contact</span><span style="color:#f9faf4;">(</span><span style="color:#78d700;font-style:italic;">&quot;nume1&quot;</span><span style="color:#f9faf4;">, </span><span style="color:#dd2867;font-weight:bold;">null</span><span style="color:#f9faf4;">, </span><span style="color:#78d700;font-style:italic;">&quot;0123456789&quot;</span><span style="color:#f9faf4;">);
+</span><span style="color:#f9faf4;">    } </span><span style="color:#dd2867;font-weight:bold;">catch </span><span style="color:#f9faf4;">(</span><span style="color:#1290c3;font-weight:bold;">InvalidFormatException </span><span style="color:#00d8ff;font-weight:bold;">e</span><span style="color:#f9faf4;">) {
+</span><span style="color:#f9faf4;">        </span><span style="color:#a7ec21;">fail</span><span style="color:#f9faf4;">();
+</span><span style="color:#f9faf4;">    }
+</span>
+<span style="color:#f9faf4;">    </span><span style="color:#00abff;font-weight:bold;font-style:italic;">repositoryContact</span><span style="color:#f9faf4;">.</span><span style="color:#cc4cba;">addContact</span><span style="color:#f9faf4;">(</span><span style="color:#00abff;font-weight:bold;font-style:italic;">con</span><span style="color:#f9faf4;">);
+</span><span style="color:#f9faf4;">    </span><span style="color:#dd2867;font-weight:bold;">for</span><span style="color:#f9faf4;">(</span><span style="color:#1290c3;font-weight:bold;">Contact </span><span style="color:#ff8b4d;font-weight:bold;">c </span><span style="color:#f9faf4;">: </span><span style="color:#00abff;font-weight:bold;font-style:italic;">repositoryContact</span><span style="color:#f9faf4;">.</span><span style="color:#cc4cba;">getContacts</span><span style="color:#f9faf4;">())
+</span><span style="color:#f9faf4;">        </span><span style="color:#dd2867;font-weight:bold;">if </span><span style="color:#f9faf4;">(</span><span style="color:#ff8b4d;font-weight:bold;">c</span><span style="color:#f9faf4;">.</span><span style="color:#cc4cba;">equals</span><span style="color:#f9faf4;">(</span><span style="color:#00abff;font-weight:bold;font-style:italic;">con</span><span style="color:#f9faf4;">))
+</span><span style="color:#f9faf4;">        {
+</span><span style="color:#f9faf4;">            </span><span style="color:#a7ec21;">assertTrue</span><span style="color:#f9faf4;">(</span><span style="color:#dd2867;font-weight:bold;">true</span><span style="color:#f9faf4;">);
+</span><span style="color:#f9faf4;">            </span><span style="color:#dd2867;font-weight:bold;">break</span><span style="color:#f9faf4;">;
+</span><span style="color:#f9faf4;">        }
+</span><span style="color:#f9faf4;">}</span></pre>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="2">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="2"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="2">Medium</td></tr>
+<tr><td colspan="3"></td></tr></table>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+test\IntegrationTest.class
+agenda\repository\classes\RepositoryActivityFileTest.class
+test\AddContactTest.class
+test\AfisActivityTest.class
+test\AddActivityTest.class
